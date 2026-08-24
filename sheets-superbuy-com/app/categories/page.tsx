@@ -1,0 +1,4 @@
+import { categories } from "../page";
+import { SiteHeader } from "../site-header";
+export const metadata={title:"Superbuy Spreadsheet Categories | Shoes, Clothing & Accessories",description:"Browse the independent Superbuy spreadsheet by product category, then verify the live record before ordering."};
+export default function Categories(){return <main><SiteHeader/><section className="directory-shell"><p className="eyebrow">Product directory</p><h1>Browse every category.</h1><p className="directory-intro">Choose a collection to open the matching live catalogue on KakobuySN. Availability, options and prices can change, so verify the destination record before ordering.</p><div className="category-grid">{categories.map(x=><a className="category-card" href={`https://kakobuysn.com${x.path}`} key={x.name}><span className="category-type">{x.count}</span><h3>{x.name}</h3><p>{x.note}</p><span className="category-link">Open collection ↗</span></a>)}</div></section></main>}
