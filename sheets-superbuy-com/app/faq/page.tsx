@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { ResearchPage } from "../research-page";
+import { BreadcrumbJsonLd, JsonLd, pageMetadata } from "../seo";
 
-export const metadata: Metadata = { title: "Superbuy Spreadsheet FAQ | Sheets Superbuy", description: "Clear answers about spreadsheet links, product checks, QC photos, pricing, storage and international parcel planning." };
+export const metadata = pageMetadata("Superbuy Spreadsheet FAQ | Sheets Superbuy", "Clear answers about spreadsheet links, product checks, QC photos, pricing, storage and international parcel planning.", "/faq/");
 
 const faqs = [
   ["Is Sheets Superbuy an official Superbuy website?", "No. It is an independent product-research resource and is not affiliated with Superbuy."],
@@ -16,9 +16,9 @@ const faqs = [
 
 export default function FAQPage() {
   const jsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
-  return <ResearchPage label="REFERENCE / FAQ · FACT CHECKED AUGUST 2026" title="Clear answers before the next click" intro="Use these answers to separate spreadsheet discovery from product verification, warehouse inspection and international delivery.">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  return <><BreadcrumbJsonLd items={[{name:"Home",path:"/"},{name:"FAQ",path:"/faq/"}]}/><ResearchPage label="REFERENCE / FAQ · FACT CHECKED AUGUST 2026" title="Clear answers before the next click" intro="Use these answers to separate spreadsheet discovery from product verification, warehouse inspection and international delivery.">
+    <JsonLd data={jsonLd} />
     <section className="long-faq">{faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary><span>{String(index + 1).padStart(2, "0")}</span>{question}<b>+</b></summary><p>{answer}</p></details>)}</section>
-    <section className="source-panel"><h2>Official references</h2><ul><li><span>Shopping Agent Guide</span></li><li><span>Fees and international shipping composition</span></li><li><span>Parcel and storage guidance</span></li></ul></section><div className="article-end"><strong>Move from questions to a real record.</strong><p>Search the live index and verify the exact option before placing an order.</p><a href="https://kakobuysn.com/AllProducts/">Browse product records ↗</a></div>
-  </ResearchPage>;
+    <section className="source-panel"><h2>Official references</h2><ul><li><span>Shopping Agent Guide</span></li><li><span>Fees and international shipping composition</span></li><li><span>Parcel and storage guidance</span></li></ul></section><div className="article-end"><strong>Move from questions to a real record.</strong><p>Search the live index and verify the exact option before placing an order.</p><a href="https://kakobuysn.com/AllProducts/" target="_blank" rel="noopener noreferrer">Browse external product records ↗</a></div>
+  </ResearchPage></>;
 }
