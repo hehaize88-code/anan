@@ -294,3 +294,6 @@ footer { padding: 45px max(4vw,24px) 28px; display: grid; grid-template-columns:
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition: none!important; } }
+/* Independent wordmark and cross-domain disclosure */
+.brand-wordmark{display:inline-flex;align-items:baseline;gap:.22rem;text-decoration:none;white-space:nowrap;letter-spacing:-.04em}.brand-wordmark span{font-weight:500;color:#1777f2}.brand-wordmark strong{font-weight:800;color:#183d35}.topbar .brand-wordmark{font-size:1.28rem}.footer-wordmark{font-size:1.2rem}.external-catalogue-note{margin:.65rem 0 1rem;font-size:.82rem;line-height:1.45;color:#536962}.external-link-note{display:block;margin-top:.7rem;font-size:.72rem;line-height:1.45;color:#687a74}.record-status{display:flex;flex-wrap:wrap;gap:.35rem .75rem;margin-top:.55rem;font-size:.7rem;color:#60736c}.record-status span:first-child{color:#1d6a58;font-weight:700}
+.policy-shell{max-width:920px}.policy-shell>.article-body{max-width:760px;margin-top:2rem}.policy-shell>.article-body section{margin-bottom:2rem}
