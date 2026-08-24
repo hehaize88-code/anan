@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sheets-superbuy-preview.hehaize88.chatgpt.site"),
+  metadataBase: new URL("https://sheets-superbuy.com"),
   title: "Sheets Superbuy — Spreadsheet Finds & QC Research",
   description: "Browse an independent Superbuy spreadsheet research desk with categorized finds, live product records, QC checks and parcel-planning guidance.",
   openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Find first. Check twice. Browse categorized finds and use a QC-first research workflow.",
     images: ["/og.png"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
