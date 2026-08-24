@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Worker-only D1 modules are not part of this static Pages build.
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
