@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { JsonLd, SITE_NAME, SITE_URL } from "./seo";
+import { WhatsAppButton } from "./whatsapp-button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sheets-superbuy.com"),
@@ -30,5 +31,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       { "@context": "https://schema.org", "@type": "Organization", name: SITE_NAME, url: SITE_URL, description: "Independent product-research publisher focused on Superbuy spreadsheet discovery, QC checks and parcel planning." },
     ]}/>
     {children}
+    <WhatsAppButton />
   </body></html>;
 }
