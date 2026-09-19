@@ -11,6 +11,7 @@ const routes = [
   { path: "/shipping-planner/", modified: "2026-08-24", frequency: "monthly", priority: 0.8 },
   { path: "/faq/", modified: "2026-08-24", frequency: "monthly", priority: 0.8 },
   { path: "/articles/", modified: "2026-08-24", frequency: "weekly", priority: 0.8 },
+  { path: "/articles/superbuy-product-research-brief/", modified: "2026-09-19", frequency: "monthly", priority: 0.7 },
   { path: "/articles/how-to-use-superbuy-spreadsheet/", modified: "2026-08-24", frequency: "monthly", priority: 0.7 },
   { path: "/articles/superbuy-qc-photo-checklist/", modified: "2026-08-24", frequency: "monthly", priority: 0.7 },
   { path: "/articles/plan-superbuy-shipping-cost/", modified: "2026-08-24", frequency: "monthly", priority: 0.7 },
